@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+*{
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+body, html{
+    background: url("imagens/bg.jpg") no-repeat fixed;
+    background-size: cover;
+    overflow: hidden;
+    height: 100%;
+    font-family: "Fredoka";
+    font-weight: 600;
+}
+
+.mosca1{
+    width: 200px;
+    right: 390px;
+    bottom: 300px;
+    transform: rotate(30deg) scaleX(-1);
+    animation: mosca1 4s ease-in-out infinite alternate ;
+}
+
+@keyframes mosca1{
+    from{}
+    to{
+        width: 400px;
+        right: 550px;
+        bottom: 230px;
+        rotate: -20deg;
+    }
+}
+
+.mosca2{
+    user-select: none;
+    -webkit-user-drag: none;
+    width: 200px;
+    left: 500px;
+    animation: mosca2 4s linear infinite alternate;
+}
+
+@keyframes mosca2{
+    from{
+    }
+
+    to{ 
+        width: 600px;
+        rotate: 360deg;
+    }
+}
+
+.menu{
+    position: absolute;
+    word-wrap: wrap;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    row-gap: 100px;
+}
+
+.title{
+    user-select: none;
+    -webkit-user-drag: none;
+    font-size: 120pt;
+    line-height: 40px;
+    color: rgb(86, 136, 228);
+}
+
+.startMenu{
+    row-gap: 50px;
+    flex-shrink: 0;
+}
+
+.dificuldade{
+    width: 300px;
+    height: 50px;
+    align-self: center;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    text-indent: 20px;
+    font-size: 16pt;
+    font-weight: 400;
+}
+
+#startBtn{
+    position: absolute;
+    bottom: -110px;
+    border-radius: 15px;
+    background-color: rgb(26, 117, 192);
+    color: white;
+    border: 0;
+    outline: 0;
+    padding: 20px;
+    width: 170px;
+    font-size: 16pt;
+    font-weight: 400;
+    align-self: center;
+}
+
+#cenario{
+    width: 100%;
+    height: 100%;
+}
+
+#timerStart{
+    position: absolute;
+    color: red;
+    font-size: 50pt;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bar{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+    justify-content: center;
+    background-color: rgb(67, 137, 243);
+    color: white;
+    font-size: 23pt;
+    width: 450px;
+    height: 180px;
+}
+
+.vidas div{
+    display: inline;
+    padding: 0px 20px;
+}
+
+.vidas span img{
+    width: 35px;
+}
+
+#tempoRestante{
+    color: white;
+    padding: 0px 60px;
+}
+
+
+.Fácil{
+    color: rgb(84, 255, 84);
+    animation: rotacaoMoscaFacil 2s linear infinite;
+}
+
+@keyframes rotacaoMoscaFacil{
+    0%{transform: 
+        translateX(0px)}
+        
+    25%{transform: 
+        translateY(-80px)
+        translateX(80px)}
+
+    50%{transform: 
+        translateY(0px)
+        translateX(160px)}
+
+    75%{transform: 
+        translateY(80px)
+        translateX(80px)}
+}
+
+.Médio{
+    color: orange;
+    animation: rotacaoMoscaFacil 1.5s linear infinite;
+}
+
+@keyframes rotacaoMoscaMedio{
+    0%{transform: 
+        translateX(0px)}
+        
+    25%{transform: 
+        translateY(-90px)
+        translateX(90px)}
+
+    50%{transform: 
+        translateY(0px)
+        translateX(180px)}
+
+    75%{transform: 
+        translateY(90px)
+        translateX(90px)}
+}
+
+.Difícil{
+    color: red;
+    animation: rotacaoMoscaDificil 1s linear infinite;
+}
+
+@keyframes rotacaoMoscaDificil{
+    0%{transform: 
+        translateX(0px)}
+        
+    25%{transform: 
+        translateY(-80px)
+        translateX(80px)}
+
+    50%{transform: 
+        translateY(0px)
+        translateX(160px)}
+
+    75%{transform: 
+        translateY(80px)
+        translateX(80px)}
+}
+
+.score{
+    position: absolute;
+    display: inline-block;
+    left: 10px;
+    top: 10px;
+    width: 300px;
+    text-indent: 20px;
+    font-size:25pt;
+    font-weight: 600;
+    background-color: rgb(42, 95, 165);
+    color: white;
+    border-radius: 14px;
+}
+
+#pontuacao{
+    font-size: 25pt;
+    padding: 20px;
+}
+
+.pequena{
+    width: 150px;
+}
+
+.media{
+    width: 220px;
+}
+
+.grande{
+    width: 300px;
+}
+
+
+.endgame-div{
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.822);
+    padding: 30px;
+    width: 700px;
+    height: 700px;
+    border-radius: 30px;
+}
+
+#gameover img{
+    width: 500px;
+    user-select: none;
+}
+
+.end-btns{
+    display: flex;
+    column-gap: 60px;
+    font-size: 20pt;
+    color: white;
+}
+
+#play-again{
+    background-color: rgb(40, 192, 26);
+    color: white;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    padding: 20px;
+    font-weight: 400;
+    align-self: center;
+}
+
+#return-menu{
+    background-color: rgb(26, 117, 192);
+    color: white;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    padding: 20px;
+    font-weight: 400;
+    align-self: center;
+}
